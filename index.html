@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+	<style type="text/css">
+		.mashina {
+			position: absolute
+		} 
+		.cot {
+			position: absolute
+		}
+		.venik {
+			position: absolute
+		}
+		.ruzhe {
+			position: absolute
+		}
+	</style>
+</head>
+<body style="background-image: url(Screenshot_5.png); background-size: cover;">
+	 <div class="bg-warning col-1" style="height: 300px">
+	 	<h2>Найди:</h2>
+	 	<h4 class="txt1">1.Бабочка</h4>
+	 	<h4 class="txt2">2.Яблоко</h4>
+	 	<h4 class="txt3">3.Гриб</h4>
+	 	<h4 class="txt4">4.Листочек</h4>
+	 	<h2>Очки:</h2>
+	 	<h4 class="score" style="color: red; margin-left: 20px">0</h4>
+	 </div>
+	 <div class="mashina" style="height: 70px; width: 70px; margin-left: 50px; margin-top: 40px; display: block;">
+	 	<img src="free-png.ru-336.png" style="height: 70px; width: 70px">
+	 </div>
+	 <div class="cot" style="height: 70px; width: 70px; margin-left: 540px; display: block; margin-top: 300px;">
+	 	<img src="krasnoe-yabloko-na-prozrachnom-fone.png" style="height: 70px; width: 70px">
+	 </div>
+	 <div class="venik" style="height: 70px; width: 70px; margin-left: 1390px; margin-top: -200px; display: block;">
+	 	<img src="0_588dd_fd2c0091_orig.png" style="height: 70px; width: 70px">
+	 </div>
+	 <div class="ruzhe" style="height: 70px; width: 70px; margin-left: 1610px; margin-top: 40px; display: block;">
+	 	<img src="1640762444_26-abrakadabra-fun-p-izobrazheniya-na-prozrachnom-fone-30.png" style="height: 70px; width: 70px">
+	 </div>
+
+	 <script type="text/javascript">
+	 	let number = 0;
+
+	 	document.querySelector(".ruzhe").onclick = function() {
+	 		document.querySelector(".ruzhe").style.display = "none";
+	 		alert("Молодец, ты нашёл бабочку!")
+	 		number =  number +1
+	 		document.querySelector(".score").innerHTML = number;
+	 		document.querySelector(".txt1").style.textDecoration = "line-through"
+	 	}
+	 	document.querySelector(".venik").onclick = function() {
+	 		document.querySelector(".venik").style.display = "none";
+	 		alert("Молодец, ты нашёл гриб!")
+	 		number =  number +1
+	 		document.querySelector(".score").innerHTML = number;
+	 		document.querySelector(".txt2").style.textDecoration = "line-through"
+	 	}
+	 	document.querySelector(".cot").onclick = function() {
+	 		document.querySelector(".cot").style.display = "none";
+	 		alert("Молодец, ты нашёл яблоко!")
+	 		number =  number +1
+	 		document.querySelector(".score").innerHTML = number;
+	 		document.querySelector(".txt3").style.textDecoration = "line-through"
+	 	}
+	 	document.querySelector(".mashina").onclick = function() {
+	 		document.querySelector(".mashina").style.display = "none";
+	 		number =  number +1
+	 		alert("Молодец, ты нашёл листочек!")
+	 		document.querySelector(".score").innerHTML = number;
+	 		document.querySelector(".txt4").style.textDecoration = "line-through"
+	 	}
+	 </script>
+</body>
+</html>
